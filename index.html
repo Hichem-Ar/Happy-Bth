@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joyeux Anniversaire DAHDOUH !</title>
+
+    <!-- Polices Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome pour les icônes -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- Notre CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- MUSIQUE DE FOND (optionnelle - décommente si tu as un fichier audio) -->
+    <!--
+    <audio id="bg-music" loop>
+        <source src="musique.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-toggle" class="music-btn">
+        <i class="fas fa-music"></i>
+    </button>
+    -->
+
+    <!-- SECTION 1: ACCUEIL -->
+    <section id="accueil" class="section">
+      <div class="container">
+        <h1 class="title">
+          <span class="cadeau-emoji">🎁</span>
+          Joyeux Anniversaire
+          <span id="prenom">DAHDOUH</span>
+          <span class="cadeau-emoji">🎈</span>
+        </h1>
+
+        <!-- PHOTO PRINCIPALE -->
+        <div class="photo-principale">
+          <img src="DHD2.jpeg" alt="Nous deux" id="photo-couple" />
+        </div>
+
+        <div class="scroll-indicator">
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: LETTRE D'AMOUR -->
+    <section id="lettre" class="section">
+      <div class="container">
+        <h2 class="section-title">
+          <i class="fas fa-heart"></i>
+          Pour toi
+          <i class="fas fa-heart"></i>
+        </h2>
+
+        <div class="lettre-contenu">
+          <p class="date">Le 20 Mai 2026</p>
+
+          <p class="cherie">Ma chérie,</p>
+
+          <p>
+            Je ne sais pas comment te décrire à quel point j’espère que tu seras
+            toujours heureuse et en paix. Ta présence dans ma vie rend mes
+            journées plus belles d’une manière douce et spéciale, et même les
+            moments les plus simples avec toi ont une saveur différente.
+          </p>
+
+          <p>
+            Je te souhaite une année remplie de joie, de réussite et de
+            sérénité, et que tous tes souhaits se réalisent, parce que tu
+            mérites toutes les belles choses de ce monde.
+          </p>
+
+          <p>Tu es la femme de mes rêves :</p>
+          <ul>
+            <li>✨ La plus belle</li>
+            <li>💫 La plus drôle</li>
+            <li>🌟 La plus attentionnée</li>
+            <li>💝 Tout simplement parfaite</li>
+          </ul>
+
+          <p>
+            Et en ce jour spécial, je voulais simplement te dire que tu es une
+            personne très proche de mon cœur, et que je souris chaque fois que
+            je te parle… Je t’aime ❤️
+          </p>
+
+          <p class="signature">
+            Avec tout mon amour,<br />
+            Koussai
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: GALERIE PHOTOS -->
+    <section id="galerie" class="section">
+      <div class="container">
+        <h2 class="section-title">
+          <i class="fas fa-camera"></i>
+          Nos souvenirs
+          <i class="fas fa-camera"></i>
+        </h2>
+
+        <div class="galerie-grid">
+          <!-- Ajoute autant de photos que tu veux -->
+          <div class="photo-item">
+            <img src="DHD1.jpeg" alt="Souvenir 1" onclick="openModal(this)" />
+          </div>
+          <div class="photo-item">
+            <img src="DHD3.jpeg" alt="Souvenir 2" onclick="openModal(this)" />
+          </div>
+          <div class="photo-item">
+            <img src="DHD4.jpeg" alt="Souvenir 3" onclick="openModal(this)" />
+          </div>
+          <div class="photo-item">
+            <img src="DHD6.jpeg" alt="Souvenir 4" onclick="openModal(this)" />
+          </div>
+          <div class="photo-item">
+            <img src="DHD5.jpeg" alt="Souvenir 5" onclick="openModal(this)" />
+          </div>
+          <div class="photo-item">
+            <img src="DHD2.jpeg" alt="Souvenir 6" onclick="openModal(this)" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL POUR AGRANDIR LES PHOTOS -->
+    <div id="modal" class="modal" onclick="closeModal()">
+      <span class="close-modal">&times;</span>
+      <img class="modal-content" id="modal-img" />
+    </div>
+
+    <!-- SECTION 5: QUIZ -->
+    <section id="quiz" class="section">
+      <div class="container">
+        <h2 class="section-title">
+          <i class="fas fa-question-circle"></i>
+          Est-ce que tu me connais ?
+          <i class="fas fa-question-circle"></i>
+        </h2>
+
+        <div class="quiz-container">
+          <!-- Question 1 -->
+          <div class="quiz-question" data-correct="d">
+            <p class="question">1. Quel était mon premier cadeau pour toi ?</p>
+            <div class="reponses">
+              <label><input type="radio" name="q1" value="a" /> Un livre</label>
+              <label
+                ><input type="radio" name="q1" value="b" /> Des fleurs</label
+              >
+              <label><input type="radio" name="q1" value="c" /> une bague</label>
+              <label
+                ><input type="radio" name="q1" value="d" /> Un cadre</label
+              >
+            </div>
+          </div>
+
+          <!-- QUESTION 2 - Voyage -->
+          <div class="quiz-question" data-correct="b">
+            <p class="question">2. Quelle est la destination de nos rêves ?</p>
+            <div class="reponses">
+              <label><input type="radio" name="q2" value="a" /> Bali</label>
+              <label
+                ><input type="radio" name="q2" value="b" /> Suisse
+                </label
+              >
+              <label><input type="radio" name="q2" value="c" /> Tokyo</label>
+              <label
+                ><input type="radio" name="q2" value="d" /> Les Maldives</label
+              >
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="quiz-question" data-correct="c">
+            <p class="question">3. Quel est mon surnom pour toi ?</p>
+            <div class="reponses">
+              <label><input type="radio" name="q3" value="a" /> Mon cœur</label>
+              <label><input type="radio" name="q3" value="b" /> Ma vie</label>
+              <label
+                ><input type="radio" name="q3" value="c" /> Kaskous</label
+              >
+              <label><input type="radio" name="q3" value="d" /> Mon bébé</label>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="quiz-question" data-correct="a">
+            <p class="question">4. Quelle est notre chanson ?</p>
+            <div class="reponses">
+              <label
+                ><input type="radio" name="q4" value="a" /> Amenisa -
+                TIF</label
+              >
+              <label
+                ><input type="radio" name="q4" value="b" /> Je t'aimais - M.
+                Pokora</label
+              >
+              <label
+                ><input type="radio" name="q4" value="c" /> Dernière danse -
+                Indila</label
+              >
+              <label
+                ><input type="radio" name="q4" value="d" /> Papaoutai -
+                Stromae</label
+              >
+            </div>
+          </div>
+
+        
+          </div>
+
+          <button id="valider-quiz" class="quiz-btn">Voir mon score</button>
+          <div id="quiz-resultat"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: SURPRISE -->
+    <section id="surprise" class="section">
+      <div class="container">
+        <h2 class="section-title">
+          <i class="fas fa-gift"></i>
+          Une surprise ?
+          <i class="fas fa-gift"></i>
+        </h2>
+
+        <div class="surprise-box" onclick="revealSurprise()">
+          <div class="cadeau" id="cadeau">
+            <i class="fas fa-gift fa-4x"></i>
+            <p>Clique pour ouvrir ton cadeau</p>
+          </div>
+          <div class="message-surprise" id="message-surprise">
+            <h3>🎉 SURPRISE ! 🎉</h3>
+            <p>Rendez-vous après le bac !</p>
+            <p class="tenue">
+              (habille-toi chic, j'ai une surprise pour toi 😘)
+            </p>
+            <p class="bisous">Je t'aime ! ❤️</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOUTON POUR REMONTER -->
+    <button id="remonter" class="remonter-btn">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Notre JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
